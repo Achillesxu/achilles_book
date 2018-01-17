@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    {% block head %}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="just for fan">
+    <meta name="author" content="achilles_xushy">
+    <link rel="icon" href="{{ static('polls/images/favicon.ico') }}">
+    <title>{% block title %}{% endblock %}</title>
+    <!-- Bootstrap -->
+    <link href="{{ static('bootstrap-3.3.7/css/bootstrap.min.css') }}" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href="{{ static('bootstrap-3.3.7/css/bootstrap-theme.min.css') }}" rel="stylesheet">
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="{{ static('bootstrap-3.3.7/css/ie10-viewport-bug-workaround.css') }}" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="{{ static('bootstrap-3.3.7/css/theme.css') }}" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="{{ static('bootstrap-3.3.7/js/html5shiv.min.js') }}"></script>
+    <script src="{{ static('bootstrap-3.3.7/js/respond.min.js') }}"></script>
+    <![endif]-->
+    {% endblock %}
+</head>
+<body>
+    {% block content %}{% endblock %}
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="{{ static('bootstrap-3.3.7/js/jquery-3.2.1.min.js') }}"></script>
+    <script>window.jQuery || document.write('<script src="{{ static('bootstrap-3.3.7/js/vendor/jquery.min.js')}}"><\/script>')</script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="{{ static('bootstrap-3.3.7/js/bootstrap.min.js') }}"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="{{ static('bootstrap-3.3.7/js/ie10-viewport-bug-workaround.js')}}"></script>
+</body>
+</html>
