@@ -18,11 +18,6 @@ from django.contrib.auth.forms import UserCreationForm
 from django.urls import reverse
 from django.utils import timezone
 
-from django.contrib.auth.models import User, Group
-from rest_framework import viewsets
-from .serializers import UserSerializer, GroupSerializer
-
-
 from .models import Question, Choice
 
 # Create your views here.
@@ -134,19 +129,3 @@ class UserRegistrationView(generic.CreateView):
 
     def get_success_url(self):
         return reverse('polls:index')
-
-
-class UserViewSet(viewsets.ModelViewSet):
-    """
-    API endpoint that allows users to be viewed or edited.
-    """
-    queryset = User.objects.all().order_by('-date_joined')
-    serializer_class = UserSerializer
-
-
-class GroupViewSet(viewsets.ModelViewSet):
-    """
-    API endpoint that allows groups to be viewed or edited.
-    """
-    queryset = Group.objects.all()
-    serializer_class = GroupSerializer
