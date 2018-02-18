@@ -25,7 +25,7 @@ SECRET_KEY = '5n++&i1v=t1*0xuxfbis5$!9uw-(r9as_q@$kns0+x&t5$e=-f'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['achilles-book.com', ]
+ALLOWED_HOSTS = ['achilles-django.com', ]
 
 
 # Application definition
@@ -92,12 +92,12 @@ WSGI_APPLICATION = 'achilles_book.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'achilles_book',
-        'USER': 'root',
+        'USER': 'achilles_psql',
         'PASSWORD': 'Filter1986',
         'HOST': 'localhost',
-        'PORT': '3306',
+        'PORT': '5432',
     }
 }
 

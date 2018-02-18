@@ -8,3 +8,7 @@
     1. 删除rest framework原来的简单例子
     2. 添加snippets子app
     3. 将子app加入admin管理，例子采用django老的版本，url采用path
+    
+## 2018-02-18
+    1. 修改域名achilles-django.com
+    2. 修改数据库为postgresql数据库
